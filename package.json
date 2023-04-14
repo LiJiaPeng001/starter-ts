@@ -1,0 +1,51 @@
+{
+	"name": "@peeeng/utils",
+	"type": "module",
+	"version": "0.0.0",
+	"packageManager": "pnpm@8.1.1",
+	"description": "@peeeng/utils",
+	"author": "Li Jiapeng <13673717028m@gmail.com>",
+	"license": "MIT",
+	"homepage": "https://github.com/lijiapeng001/starter-ts#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/lijiapeng001/starter-ts.git"
+	},
+	"bugs": "https://github.com/lijiapeng001/starter-ts/issues",
+	"keywords": [
+		"utils",
+		"@peeeng",
+		"@peeeng/utils",
+		"ts"
+	],
+	"scripts": {
+		"build": "vite build",
+		"dev": "nr build --watch",
+		"play": "nr -C playground dev",
+		"lint": "eslint .",
+		"prepublishOnly": "nr build",
+		"release": "bumpp && npm publish"
+	},
+	"exports": {
+		".": {
+			"types": "./dist/index.d.ts",
+			"require": "./dist/index.cjs",
+			"import": "./dist/index.mjs"
+		}
+	},
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"devDependencies": {
+		"@types/node": "^18.15.11",
+		"eslint": "^8.38.0",
+		"lint-staged": "^13.2.1",
+		"typescript": "^5.0.4",
+		"vite": "^4.2.1",
+		"vite-plugin-dts": "^2.2.0",
+		"vitest": "^0.30.1"
+	}
+}
