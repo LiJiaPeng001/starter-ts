@@ -19,13 +19,17 @@
 		"ts"
 	],
 	"scripts": {
-		"build": "vite build",
-		"dev": "nr build --watch",
-		"play": "nr -C playground dev",
+		"build": "unbuild",
+		"dev": "unbuild --stub",
 		"lint": "eslint .",
+		"play": "nr -C playground dev",
 		"prepublishOnly": "nr build",
-		"release": "bumpp && npm publish"
+		"release": "bumpp && npm publish",
+		"start": "esno src/index.ts",
+		"test": "vitest",
+		"typecheck": "vue-tsc --noEmit"
 	},
+	"sideEffects": false,
 	"exports": {
 		".": {
 			"types": "./dist/index.d.ts",
@@ -39,13 +43,23 @@
 	"files": [
 		"dist"
 	],
+	"typesVersions": {
+		"*": {
+			"*": [
+				"./dist/*",
+				"./dist/index.d.ts"
+			]
+		}
+	},
 	"devDependencies": {
 		"@types/node": "^18.15.11",
 		"eslint": "^8.38.0",
 		"lint-staged": "^13.2.1",
 		"typescript": "^5.0.4",
 		"vite": "^4.2.1",
-		"vite-plugin-dts": "^2.2.0",
 		"vitest": "^0.30.1"
+	},
+	"dependencies": {
+		"unbuild": "^1.2.1"
 	}
 }
