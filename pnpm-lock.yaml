@@ -4,9 +4,6 @@ importers:
 
   .:
     devDependencies:
-      '@antfu/utils':
-        specifier: ^0.7.2
-        version: registry.npmmirror.com/@antfu/utils@0.7.2
       '@types/node':
         specifier: ^18.15.11
         version: registry.npmmirror.com/@types/node@18.15.11
