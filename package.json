@@ -1,7 +1,7 @@
 {
 	"name": "@peeeng/xxx",
 	"type": "module",
-	"version": "0.0.1",
+	"version": "0.0.0",
 	"packageManager": "pnpm@8.1.1",
 	"description": "peeeng xxx",
 	"author": "JiaPeng Li <13673717028m@gmail.com>",
